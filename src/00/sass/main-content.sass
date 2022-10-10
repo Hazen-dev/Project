@@ -5,7 +5,7 @@
     height: 90%
     margin: 0
     display: grid
-    grid-template-rows: 1.7fr 1fr
+    grid-template-rows: 1.4fr 1fr
     &__text-mainFirst //text MAIN
         font-size: 2.8rem
         text-align: center
@@ -15,9 +15,9 @@
         font-size: 1.6rem
         text-align: center
         letter-spacing: .3px
-        margin: 0
-        margin-bottom: 6%
-        margin-top: 2rem
+        // margin: 0
+        // margin-bottom: 12%
+        // margin-top: 2rem
         width: 80%
         @include margin($x)
 
@@ -28,9 +28,13 @@
         border-radius: 10px
         display: block
         @include margin($x, $y)
+        margin-top: 3rem
     &__btn-txt //button and two texts
         padding-top: 8%
 
     &__div-img //img on MAIN content
         width: 80%
-        @include margin($x)
+        @include margin($x, $y)
+    &__img-main
+        height: 25vh
+        background: black
