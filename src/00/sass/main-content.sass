@@ -1,6 +1,7 @@
 @import 'others.sass'
 
 .main
+    background: $blue
     width: 100%
     height: 90%
     margin: 0
@@ -15,12 +16,8 @@
         font-size: 1.6rem
         text-align: center
         letter-spacing: .3px
-        // margin: 0
-        // margin-bottom: 12%
-        // margin-top: 2rem
         width: 80%
         @include margin($x)
-
     &__button-main //button
         width: 16rem
         height: 50%
@@ -29,6 +26,11 @@
         display: block
         @include margin($x, $y)
         margin-top: 3rem
+        background: $button
+        border-style: none
+        font-size: 1.3rem
+        color: white
+        padding: 1rem
     &__btn-txt //button and two texts
         padding-top: 8%
 
@@ -37,4 +39,4 @@
         @include margin($x, $y)
     &__img-main
         height: 25vh
-        background: black
+        background: $other

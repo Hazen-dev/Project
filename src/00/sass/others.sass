@@ -1,5 +1,10 @@
 $x: true
 $y: true
+$blue: #043873
+$button: #4F9CF9
+$other: #C4DEFD
+$yellow: #FFE492
+$black: #212529
 @mixin margin($x: false, $y: false)
     @if $x
         margin: 
@@ -10,3 +15,7 @@ $y: true
             top: auto
             bottom: auto
         
+.--button
+    border-style: none
+    background: $button
+    border-radius: 8px

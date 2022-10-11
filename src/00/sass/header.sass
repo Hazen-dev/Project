@@ -1,5 +1,6 @@
+@import 'others'
 .header
-    background: red
+    background: $blue
     display: flex
     justify-content: space-between
     align-items: center
@@ -11,13 +12,16 @@
         margin: 1rem
     &__logo-text
         font-size: 1.4rem
-
-    &__burger //burger
+    &__content //div with all buttons and burger
         margin: 
             left: 1rem
             right: 1.5rem
         height: 2.8rem
-        width: fit-content
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        // width: 20rem
+    &__burger-span //div over only span of burger
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -25,5 +29,33 @@
         display: block
         width: 3.8rem
         height: 4px
-        background: black
+        background: white
         border-radius: 10px
+
+        // buttons for pc and laptops
+
+    &__burger-pc-buttons  //all buttons content
+        display: none
+        align-self: center // flex in media
+        margin-right: 1.5rem
+    &__buttons-low // buttons without border
+        font-size: 1.6rem
+        background: #ffffff00
+        margin-left: 2rem
+        border: none
+        color: white
+    &__button-login
+        font-size: 1.6rem
+        padding: 1rem 2rem 1rem 2rem
+        border-radius: 8px
+        margin-right: 1rem
+        margin-left: 2rem
+        background: $yellow
+        border-style: none
+    &__button-trial
+        font-size: 1.6rem
+        padding: 1rem 2rem 1rem 2rem
+        border-radius: 8px
+        background: $button
+        border-style: none
+    
