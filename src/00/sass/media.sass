@@ -1,7 +1,16 @@
 @media only screen and (min-width: 200px) and (min-height: 300px) // starting low res
+    .container
+        max-width: 100vw
+        height: fit-content
+        overflow: hidden
     .main
         &__div-img
             display: none
+    .price
+        &__list
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr
+            @include margin(true, false)
     
 @media only screen and (min-height: 640px) // small phones
     .main
@@ -21,10 +30,22 @@
             font-size: 1.5rem
         &__img-one
             height: 15rem
-    .price
+    .price //prices
         &__list
             grid-template-columns: 1fr
             grid-template-rows: 1fr
+        &__list-free
+            width: 15rem
+            padding-bottom: 2rem
+        &__list-organization
+            width: 20rem
+        &__list-personal //contents of collumns
+            width: 15rem
+        &__list-personal
+            padding-bottom: 2rem
+
+        
+    
 
 @media only screen and (min-width: 375px) and (min-height: 752px) //Iphone X
     .main
@@ -33,6 +54,11 @@
             height: 85%
 
 @media only screen and (min-width: 768px) and (min-height: 1024px) //Tablets
+    .container
+        display: flex
+        flex-direction: column
+        align-content: center
+        align-items: center
     .main
         padding-top: 2rem
         &__text-mainFirst
@@ -43,18 +69,29 @@
             margin: 
                 top: 4rem
     .price //displaying based on resolution 1 or all prices
+        &__list
+            grid-template-columns: 1fr 1fr 1fr
+            grid-template-rows: 1fr
+            align-self: center
+        &__text
+        &__title
         &__list-free
             display: block
         &__list-personal
             display: block
         &__list-organization
             display: block
-    .price //grid layout
-        &__list
-            @include margin(true, false)
+
+        &__description //texts
             width: 70%
+            @include margin(true, fasle)
+    .price //grid layout
+        &__text
+            width: fit-content
+        &__list
             grid-template-columns: repeat(3, 1fr)
             grid-template-rows: 1fr
+            
 @media only screen and (min-width: 1360px) and (min-height: 663px) //Laptops
     .header //bar menu with burger
         // width: 95%
@@ -144,6 +181,8 @@
             width: 80%
             grid-template-columns: repeat(3, 1fr)
             grid-template-rows: 1fr
+        &__selector
+            display: none
 @media only screen and (min-width: 1920px) //PC
     .header //bar menu
         width: 90%

@@ -12,22 +12,26 @@
         font-weight: 400
 
     &__list //list of three columns (only block properties)
-        margin-top: 2rem
+        margin-top: 4rem
         display: grid
         grid-template-columns: repeat(3, 1fr)
         grid-template-rows: 1fr
         justify-items: center
         align-items: center
+        gap: 2rem
     &__list-free
         display: none
-        height: 40rem
+        height: 30rem
     &__list-organization
         display: none
-        height: 45rem
-        width: 30%
+        height: 35rem
+        width: 100%
+        background: $blue
+        border-radius: 10px
+        color: white
     &__list-personal
         display: block
-        height: 40rem
+        height: 30rem
         width: 30%
     &__list--aside //modyfikator for left and right column
         width: 100%
@@ -36,5 +40,54 @@
         border-radius: 10px
 
     &__content-title //content iside of all three columns
-        font-size: 2.4rem
-    
+        font-size: 1.4rem
+        font-weight: 500
+    &__content
+        margin-top: 2rem
+        margin-left: 1rem
+        text-align: left
+        font-size: .7rem
+    &__benefits
+        display: flex
+        flex-direction: column
+        height: 80%
+    &__benefits-list //text styles //list of profits
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 60%
+        list-style: url("../imgs/vector/list-grey.svg")
+        font-weight: 400
+        font-size: .8rem
+        text-align: left
+    &__content-price
+        font-size: 1.5rem
+    &__content-description
+        font-size: .9rem
+        font-weight: 500
+    &__benefits-getStarted //button
+        margin: .6rem 0 0 1rem
+        padding: .7rem 0 .7rem 0
+        width: 7rem
+        background: white
+
+    &__selector
+        margin: 2rem 0
+    &__firstColumn
+        padding: .8rem
+    &__secondColumn
+        padding: .8rem
+    &__thirdColumn
+        padding: .8rem
+
+
+    &__benefits-list--organization-list //modyfikatory
+        list-style: url("../imgs/vector/list-yellow.svg")
+    &__benefits-getStarted--aside //button aside
+        background: white
+        border: 1px solid #FFE492
+    &__benefits-getStarted--main //main button
+        background: $button
+        color: white
+    &__content-price--yellow
+        color: $yellow
