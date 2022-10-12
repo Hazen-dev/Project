@@ -5,7 +5,9 @@ $button: #4F9CF9
 $other: #C4DEFD
 $yellow: #FFE492
 $black: #212529
-@mixin margin($x: false, $y: false)
+@mixin margin($x: false, $y: false, $type: padding, $value: 0)
+    @if $type == padding
+         padding: 0 $value 0 $value
     @if $x
         margin: 
             left: auto
@@ -14,7 +16,6 @@ $black: #212529
         margin: 
             top: auto
             bottom: auto
-        
 .--button
     border-style: none
     background: $button

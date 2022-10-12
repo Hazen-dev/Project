@@ -1,0 +1,40 @@
+@import 'others'
+.price
+    padding-top: 4rem
+    &__text //text top on price section
+        @include margin(true, false)
+        width: 90%
+        color: $black
+        text-align: center
+    &__title
+        font-size: 3rem
+    &__description
+        font-weight: 400
+
+    &__list //list of three columns (only block properties)
+        margin-top: 2rem
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 1fr
+        justify-items: center
+        align-items: center
+    &__list-free
+        display: none
+        height: 40rem
+    &__list-organization
+        display: none
+        height: 45rem
+        width: 30%
+    &__list-personal
+        display: block
+        height: 40rem
+        width: 30%
+    &__list--aside //modyfikator for left and right column
+        width: 100%
+        background: #FFFFFF
+        border: 1px solid #FFE492
+        border-radius: 10px
+
+    &__content-title //content iside of all three columns
+        font-size: 2.4rem
+    

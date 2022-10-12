@@ -14,6 +14,17 @@
             height: 4.2rem
         &__img-main
             height: 100%
+        &__btn-txt
+            margin-top: 1.5rem
+    .main-second
+        &__secondText
+            font-size: 1.5rem
+        &__img-one
+            height: 15rem
+    .price
+        &__list
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr
 
 @media only screen and (min-width: 375px) and (min-height: 752px) //Iphone X
     .main
@@ -31,8 +42,32 @@
         &__button-main
             margin: 
                 top: 4rem
+    .price //displaying based on resolution 1 or all prices
+        &__list-free
+            display: block
+        &__list-personal
+            display: block
+        &__list-organization
+            display: block
+    .price //grid layout
+        &__list
+            @include margin(true, false)
+            width: 70%
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: 1fr
+@media only screen and (min-width: 1360px) and (min-height: 663px) //Laptops
+    .header //bar menu with burger
+        // width: 95%
+        // @include margin(false, false, padding, 2.5%)
+        padding-top: 1rem
+        &__burger-Firstbuttons-pc //buttons one and two
+            display: block
+        &__burger-secondButtons-pc
+            display: none
+        &__burger-pc-buttons //content of buttons
+            display: block
 
-@media only screen and (min-width: 1366px) and (min-height: 768px) //Laptops
+
     .main
         grid-template-columns: 1fr 1fr
         grid-template-rows: 1fr
@@ -61,14 +96,6 @@
             margin: 0
         &__button-main
             width: 40%
-    .header //bar menu with burger
-        &__burger-Firstbuttons-pc //buttons one and two
-            display: block
-        &__burger-secondButtons-pc
-            display: none
-        &__burger-pc-buttons //content of buttons
-            display: block
-    
 
     //next section
     .main-second
@@ -93,16 +120,48 @@
                 left: 3.3rem
             display: flex
             flex-direction: column
-            height: 40rem
+            height: 30rem
             justify-content: space-between
+            align-self: center
+            margin-bottom: 4rem
         &--first
             padding-top: 8.6rem
             padding-bottom: 8.6rem
-            
+        &__texts--first
+            order: 2
+    
+    .price //displaying based on resolution 1 or all prices
+        &__list-free
+            display: block
+        &__list-personal
+            display: block
+        &__list-organization
+            display: block
+
+    .price //grid layout
+        &__list
+            @include margin(true, false)
+            width: 80%
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: 1fr
 @media only screen and (min-width: 1920px) //PC
+    .header //bar menu
+        width: 90%
+        @include margin(false, false, padding, 5%)
+        &__burger-span
+            display: none
+        &__burger-secondButtons-pc
+            display: block
+        &__burger-pc-buttons
+            display: flex
+            flex-direction: row-reverse
+            align-items: center
+
     .main
         grid-template-columns: 1fr 1.6fr
         grid-template-rows: 1fr
+        width: 90%
+        padding: 0 5% 0 5%
         &__btn-txt
             height: 75%
             justify-content: center
@@ -118,15 +177,9 @@
             width: 85%
         
         //next section
-        .main-second
-            &__firstText
-                font-size: 4rem
-    .header //bar menu
-        &__burger
-            display: none
-        &__burger-secondButtons-pc
-            display: block
-        &__burger-pc-buttons
-            display: flex
-            flex-direction: row-reverse
-            align-items: center
+    .main-second
+        &__firstText
+            font-size: 4rem
+        &__secondText
+            font-size: 2rem
+            width: 90%
