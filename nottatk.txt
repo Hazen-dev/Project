@@ -1,2 +1,11 @@
 jednak sekcja w wiekzymi oinforacjami dla pc
 i osobna mała tupka ogólna ez
+
+header__burger-span
+burger
+
+header__resources header__buttons-low
+przycuski pc
+
+price__firstColumn --button
+selektory

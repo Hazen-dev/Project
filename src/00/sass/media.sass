@@ -91,7 +91,11 @@
         &__list
             grid-template-columns: repeat(3, 1fr)
             grid-template-rows: 1fr
-            
+    .footer
+        &__top-info
+            display: none
+        &__bottom-left
+            width: 100vw
 @media only screen and (min-width: 1360px) and (min-height: 663px) //Laptops
     .header //bar menu with burger
         // width: 95%
@@ -183,8 +187,24 @@
             grid-template-rows: 1fr
         &__selector
             display: none
+    .footer
+        &__top-info
+            display: flex
+        &__bottom-info
+            @include margin(true, false)
+            display: flex
+            width: 95%
+        &__bottom-left
+            margin-left: 4rem
+            flex-direction: row
+            align-items: baseline
+        &__bottom-left-content
+            padding: 0 1rem
+        &__bottom-right
+
 @media only screen and (min-width: 1920px) //PC
     .header //bar menu
+        padding-top: 1.2rem !important
         width: 90%
         @include margin(false, false, padding, 5%)
         &__burger-span
@@ -222,3 +242,8 @@
         &__secondText
             font-size: 2rem
             width: 90%
+    .footer
+        &__top-info
+            width: 80%
+        &__bottom-info
+            width: 80%

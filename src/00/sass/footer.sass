@@ -1,0 +1,52 @@
+@import 'others'
+.footer
+    margin-top: 4rem
+    background: $blue
+    font-size: 1rem
+    &__top-info
+        @include margin(true, false)
+        padding-top: 2rem
+        // display: grid
+        // align-content: center
+        // grid-template-columns: repeat(5, 1fr)
+        // grid-template-rows: 1fr
+        width: 95%
+        display: flex
+        justify-content: center
+        justify-items: center
+        display: none
+
+    &__content //elements into column
+        // align-self: center
+        // justify-self: center
+        width: 20%
+        margin: 0 4rem
+    &__content--title
+        font-size: 1rem
+        font-weight: 600
+    &__content--title-logo //of logo
+        font-size: 1.6rem
+    &__content-content //texts in content
+        width: 90%
+        font-size: 0.8rem
+        font-weight: 300
+    &__description //of logo
+        margin-left: 1rem
+        line-height: 1.5rem
+
+    &__bottom-right
+        display: flex
+        @include margin(true, false)
+        padding: 2rem 0
+        width: 20%
+        justify-content: space-around
+    &__bottom-left
+        width: 100%
+        padding-top: 1.2rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        font-size: 1.1rem
+        font-weight: 300
+    &__bottom-year
+        margin-bottom: 0
