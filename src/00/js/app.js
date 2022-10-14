@@ -1,1 +1,6 @@
-console.log("No to teraz js");
+import eventsMenager from './events';
+
+function Start() {
+  eventsMenager();
+}
+Start();

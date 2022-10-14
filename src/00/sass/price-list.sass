@@ -19,20 +19,27 @@
         justify-items: center
         align-items: center
         gap: 2rem
+        transition: 2s
     &__list-free
-        display: none
+        //display: none
         height: 30rem
+        transition: 1s
+        order: 0
     &__list-organization
-        display: none
+        //display: none
         height: 35rem
         width: 100%
         background: $blue
         border-radius: 10px
         color: white
+        transition: 1s
+        order: 1
     &__list-personal
         display: block
         height: 30rem
         width: 30%
+        transition: 1s
+        order: 2
     &__list--aside //modyfikator for left and right column
         width: 100%
         background: #FFFFFF
@@ -91,3 +98,4 @@
         color: white
     &__content-price--yellow
         color: $yellow
+

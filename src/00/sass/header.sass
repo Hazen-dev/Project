@@ -54,6 +54,10 @@
         background: $yellow
         border-style: none
         color: $blue
+        transition: .6s
+    &__button-login:hover
+        background: $button
+        border-color: $button
     &__button-trial
         font-size: 1.6rem
         padding: 1rem 2rem 1rem 2rem
@@ -61,4 +65,24 @@
         background: $button
         border-style: none
         color: white
+        transition: .6s
+    &__button-trial:hover
+        background: $yellow
+    
+    &__burger-open
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: fixed
+        right: -100vw
+        top: 0px
+        min-width: 100%
+        background: $blue
+        width: 20vw
+        height: 35vh
+        transition: .8s
+        transition-timing-function: cubic-beizer(.17,.67,.83,.67)
+    &__burger-animation
+        right: 0
     

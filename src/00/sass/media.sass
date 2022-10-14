@@ -8,9 +8,10 @@
             display: none
     .price
         &__list
-            grid-template-columns: 1fr
+            grid-template-columns: 1fr 1fr 1fr
             grid-template-rows: 1fr
             @include margin(true, false)
+            justify-content: center
     
 @media only screen and (min-height: 640px) // small phones
     .main
@@ -32,7 +33,7 @@
             height: 15rem
     .price //prices
         &__list
-            grid-template-columns: 1fr
+            grid-template-columns: 1fr 1fr 1fr
             grid-template-rows: 1fr
         &__list-free
             width: 15rem
@@ -247,3 +248,22 @@
             width: 80%
         &__bottom-info
             width: 80%
+
+    //animation modificators
+.--price__list-move-left
+    transform: translateX(35vw)
+
+        //animation modificators
+.--price__list-move-right
+    transform: translateX(-35vw)
+
+.--price__list-move-left-ph
+    transform: translateX(75vw)
+
+        //animation modificators
+.--price__list-move-right-ph
+    transform: translateX(-75vw)
+
+
+.--listArea-phone
+    grid-template-columns: 1fr 1fr 1fr
